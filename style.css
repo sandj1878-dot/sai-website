@@ -8,6 +8,21 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   /* darker, high-contrast base */
@@ -1242,5 +1257,203 @@ footer {
 
   .buttons {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 14px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  .nav a {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 84px 5% 56px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    border-radius: 0;
+  }
+
+  .hero-media {
+    border-radius: 0;
+    background-position: center top;
+  }
+
+  h1 {
+    font-size: clamp(34px, 9.5vw, 46px);
+    letter-spacing: -1px;
+    line-height: 1.08;
+    margin: 14px 0 18px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    margin-bottom: 22px;
+    max-width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-highlights,
+  .grid,
+  .modules-list,
+  .data-grid,
+  .dashboard-grid,
+  .dashboard-panels,
+  .profile-details,
+  .compliance-grid,
+  .venue-grid,
+  .venue-detail-grid,
+  .venue-detail-panels,
+  .search-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .scan-data {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .timeline-line {
+    width: 1px;
+    height: 36px;
+  }
+
+  .section {
+    padding: 64px 5%;
+  }
+
+  .section h2 {
+    font-size: clamp(28px, 7.2vw, 36px);
+    margin: 12px 0 22px;
+  }
+
+  .card,
+  .timeline-item,
+  .module-item,
+  .panel,
+  .dashboard,
+  .app-sidebar,
+  .app-shell,
+  .venue-detail-card {
+    padding: 18px;
+  }
+
+  .app-shell {
+    margin: 18px 5%;
+  }
+
+  .app-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .app-toolbar,
+  .dashboard-summary,
+  .profile-summary,
+  .page-header-inline,
+  .venue-detail-header,
+  .breadcrumb-trail {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  thead th,
+  tbody td {
+    padding: 10px 8px;
+    font-size: 12px;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+
+  .hero {
+    padding: 74px 4% 44px;
+    gap: 22px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 10vw, 34px);
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 52px 4%;
+  }
+
+  .section h2 {
+    font-size: clamp(24px, 8.6vw, 30px);
+  }
+
+  .nav,
+  .app-shell,
+  footer,
+  .legal-disclaimer {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .app-shell {
+    margin-left: 4%;
+    margin-right: 4%;
+    padding: 14px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+
+  .scan-box {
+    height: auto;
+    padding: 16px;
+  }
+
+  .portal-pill,
+  .risk-chip {
+    font-size: 11px;
   }
 }
